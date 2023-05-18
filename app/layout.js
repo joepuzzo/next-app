@@ -1,4 +1,4 @@
-import { MyProvider } from "@/components/AppProvider";
+import { AppProvider } from "@/components/AppProvider";
 import "./globals.css";
 import styles from "./page.module.css";
 
@@ -17,15 +17,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className={styles.main}>
-          <div>
-            <Link href="/">Home</Link>
-            <Link href="/friends/1">First Friend</Link>
-            <Link href="/friends/2">Second Friend</Link>
-          </div>
-          <h1>Users name is {name}</h1>
-          <MyProvider user={user}>{children}</MyProvider>
-        </main>
+        <div className="server">
+          <h3>Main Layout</h3>
+          <main className={styles.main}>
+            <div>
+              <Link href="/">Home</Link>
+              <Link href="/friends/1">First Friend</Link>
+              <Link href="/friends/2">Second Friend</Link>
+            </div>
+            <h1>Users name is {name}</h1>
+            <AppProvider user={user}>{children}</AppProvider>
+          </main>
+        </div>
       </body>
     </html>
   );

@@ -93,6 +93,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  text-align: center;
 }
 
 a {
@@ -130,4 +131,14 @@ h3,
 h4,
 h5 {
   margin: 10px;
+}
+
+.client {
+  border: 1px solid blue;
+  padding: 30px;
+}
+
+.server {
+  border: 1px solid orange;
+  padding: 30px;
 }

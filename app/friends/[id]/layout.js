@@ -7,8 +7,9 @@ export const metadata = {
 
 export default function FriendLayout({ children, params }) {
   return (
-    <div>
-      <h3>Friends name is {name}</h3>
+    <div className="cleint">
+      <h3>Friend Layout.js</h3>
+      <h4>Friends name is {name}</h4>
       {children}
     </div>
   );

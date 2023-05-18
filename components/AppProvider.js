@@ -3,11 +3,14 @@ import React, { useState } from "react";
 
 export const MyContext = React.createContext();
 
-export function MyProvider({ children, user }) {
+export function AppProvider({ children, user }) {
   const [apples, setApples] = useState(5);
   return (
-    <MyContext.Provider value={{ apples, setApples, user }}>
-      {children}
-    </MyContext.Provider>
+    <div class="client">
+      <h3>AppProvider</h3>
+      <MyContext.Provider value={{ apples, setApples, user }}>
+        {children}
+      </MyContext.Provider>
+    </div>
   );
 }
